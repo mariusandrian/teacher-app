@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha 'tests/apiTest.test.js'",
+    "start": "NODE_ENV=prod nodemon index.js",
+    "start:test": "NODE_ENV=test nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mocha": "^8.2.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.6",
+    "supertest": "^5.0.0",
     "util": "^0.12.3"
   }
 }
